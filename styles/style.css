@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#8C3061;
+    --color-hover: #522258;
+
+    --fuente-montse: "Montserrat", sans-serif;
+    --fuente-raleway:"Raleway", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-montse);
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 3% 0% 4% 4%;
+    background-color:  rgb(212, 111, 182);
+    display: flex;
+    flex-direction: row;
+}
+
+.header__titulo{
+    margin: 0% 2% 0% 8%;
+    color:#8C3061;
+    font-weight: 800;
+    font-size: 370%;
+}
+
+.principal{
+    margin:3%;
+    background-color: #e4b3cd;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.encriptado{
+    margin: 4% 5% 4% 5%;
+    padding: 4%;
+    border-radius: 16px;
+    background-color: rgb(212, 111, 182);
+    display: flex;
+}
+
+.encriptado__entrada{
+    border-radius: 16px;
+    margin:2%;
+    padding: 4%;
+    background-color: rgb(172, 69, 137);
+    display: flex;
+    flex-direction: column;
+}
+
+.encriptado__entrada__texto{
+    border-radius: 16px;
+    margin:2%;
+    padding: 4% 2% 50% 3%;
+    background-color: rgb(58, 5, 40);
+    cursor: text;
+    color: #F6F6F6;
+}
+
+.encriptado__entrada__advertencia{
+    font-size: small;
+}
+
+.encriptado__botones{
+    margin:2%;
+    padding: 15% 3% 4% 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4b3cd;
+    gap: 10%;
+}
+
+.encriptado__botones__encri{
+    border-radius: 16px;
+    margin:2%;
+    padding: 4%;
+    background-color: #af67d3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.encriptado__botones__desencri{
+    border-radius: 16px;
+    margin:2%;
+    padding: 4%;
+    background-color: #af67d3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.desencriptado{
+    margin: 4% 2% 4% 2%;
+    padding: 4%;
+    border-radius: 16px;
+    background-color: #af67d3;
+    display: flex;
+    flex-direction: column;
+}
+
+.desencriptado__ilustracion{
+    width: 80%;  
+}
+
+.desencriptado__boton{
+    border-radius: 16px;
+    margin:2%;
+    padding: 4%;
+    background-color: #8b43af;   
+    color: #F6F6F6;
+    text-decoration: none;
+}
+
+.footer{
+    background-color:  rgb(212, 111, 182);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family:var(--fuente-montse);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width:1200px){
+    .principal{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:480px){
+    .principal{
+        flex-direction: column;
+    }
+    .encriptado{
+        margin: 4% 5% 4% 5%;
+        justify-content: center;
+    }
+
+    .desencriptado{
+        align-items: center;
+    }
+}
