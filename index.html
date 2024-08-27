@@ -9,25 +9,24 @@
 <body>
     <header class="header">
         <img class="header__logo" src="./assets/Logo.png" alt="logo">
-        <div class="header__titulo">Encripatador de textos</div>
+        <div class="header__titulo">Encriptador de textos</div>
     </header>
     <main class="principal">
         <div class="encriptado">
             <div class="encriptado__entrada">
-                <input type="text" class="encriptado__entrada__texto" placeholder="Ingrese el texto aquí">
+                <input id="textoentrada" type="text" class="encriptado__entrada__texto" placeholder="Ingrese el texto aquí">
                 <p class="encriptado__entrada__advertencia"><img src="./assets/Group.png" alt="advertencia">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="encriptado__botones">
-                <a href="" class="encriptado__botones__encri">Encriptar</a>
-                <a href="" class="encriptado__botones__desencri">Desencriptar</a>
-
+                <a href="" id="btnEncriptar" class="encriptado__botones__encri">Encriptar</a>
+                <a href="" id="btnDesencriptar" class="encriptado__botones__desencri">Desencriptar</a>
             </div>
         </div>
         <div class="desencriptado">
             <img src="./assets/ok-Photoroom.png" alt="looking" class="desencriptado__ilustracion">
-            <h2 class="desencriptado__aviso">Ningún mensaje fue encontrado</h2>
-            <p class="desencripatado__entrada">Ingresa el texto que desees encriptar o desencriptar.</p>
-            <a href="" class="desencriptado__boton">Copiar</a>
+            <h2 class="desencriptado__aviso">Resultado</h2>
+            <p id="textoSalida" class="desencripatado__entrada">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <a href="" id="btnCopiar" class="desencriptado__boton" hidden>Copiar</a>
         </div>
     </main>
     <footer class="footer">
