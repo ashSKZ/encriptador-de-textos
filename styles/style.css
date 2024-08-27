@@ -38,7 +38,7 @@ body{
 }
 
 .principal{
-    margin:3%;
+    margin:2%;
     background-color: #e4b3cd;
     border-radius: 16px;
     display: flex;
@@ -47,10 +47,12 @@ body{
 
 .encriptado{
     margin: 4% 5% 4% 5%;
-    padding: 4%;
+    padding: 2%;
     border-radius: 16px;
     background-color: rgb(212, 111, 182);
     display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 .encriptado__entrada{
@@ -69,6 +71,7 @@ body{
     background-color: rgb(58, 5, 40);
     cursor: text;
     color: #F6F6F6;
+    font-size: medium;
 }
 
 .encriptado__entrada__advertencia{
@@ -77,9 +80,9 @@ body{
 
 .encriptado__botones{
     margin:2%;
-    padding: 15% 3% 4% 3%;
+    padding: 2% 3% 4% 3%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     background-color: #e4b3cd;
     gap: 10%;
@@ -92,6 +95,13 @@ body{
     background-color: #af67d3;
     text-decoration: none;
     cursor: pointer;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.encriptado__botones__encri:hover{
+    background-color: #8b43af;
 }
 
 .encriptado__botones__desencri{
@@ -101,6 +111,13 @@ body{
     background-color: #af67d3;
     text-decoration: none;
     cursor: pointer;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.encriptado__botones__desencri:hover{
+    background-color: #8b43af;
 }
 
 .desencriptado{
@@ -108,21 +125,30 @@ body{
     padding: 4%;
     border-radius: 16px;
     background-color: #af67d3;
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+
 }
 
 .desencriptado__ilustracion{
     width: 80%;  
 }
 
-.desencriptado__boton{
+.desencriptado__boton {
     border-radius: 16px;
-    margin:2%;
+    margin: 2%;
     padding: 4%;
     background-color: #8b43af;   
     color: #F6F6F6;
     text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.desencriptado__boton:hover{
+    background-color: #702794; 
 }
 
 .footer{
@@ -136,9 +162,29 @@ body{
 }
 
 @media(max-width:1200px){
+    .header__titulo{
+        font-size: 200%;
+    }
+
     .principal{
         flex-direction:column;
     }
+
+    .encriptado{
+        flex-direction: column;
+        width: auto;
+    }
+
+    .encriptado__botones{
+        flex-direction: row;
+        justify-content: center;
+        padding: 2% 3% 2% 3%;
+    }
+
+    .desencriptado__boton{
+        justify-content: center;
+    }
+    
 }
 
 @media(max-width:480px){
@@ -148,6 +194,11 @@ body{
     .encriptado{
         margin: 4% 5% 4% 5%;
         justify-content: center;
+        flex-direction: column;
+    }
+
+    .encriptado__botones{
+        flex-direction: column;
     }
 
     .desencriptado{
